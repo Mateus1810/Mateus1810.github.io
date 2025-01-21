@@ -1,0 +1,92 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: "Raleway", serif;
+    background-image: url('../src/img/1373383.png'); /* Substitua pelo seu fundo */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+ 
+
+/* Media Query para telas menores (telefone/celular) */
+@media (max-width: 768px) {
+    body {
+        background-image: url('../src/img/7adbace9787dadcb1365f11917c8b6d6.jpg'); /* Fundo para celular */
+    }
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ccff;
+}
+
+/* Seção Home */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ocupa a altura total da tela */
+   
+}
+
+.home-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para destacar o conteúdo */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+}
+
+.home-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.home-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    background-color: #00ccff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0090b3;
+    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+}
