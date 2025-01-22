@@ -2,7 +2,7 @@
 
 const services = [
   {
-    href: "pergunta_manutencao.html?servico=manutenção%20de%20computadores",
+    href: "../services/manutenção.html?servico=manutenção%20de%20computadores",
     img: "../src/img/Design sem nome.png",
     alt: "Ícone Manutenção de Computadores",
     label: "Manutenção de Computadores",

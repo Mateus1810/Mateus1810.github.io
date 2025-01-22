@@ -7,3 +7,4 @@ routes.forEach(route => {
     li.innerHTML = `<a href="${route.href}"><i class="${route.icon}"></i> ${route.label}</a>`;
     navList.appendChild(li);
 });
+

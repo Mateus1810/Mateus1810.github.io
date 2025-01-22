@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Digital Drift transforma suas ideias em soluções digitais criativas. Conheça nossos serviços de desenvolvimento e design.">
     <title>Digital Drift</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../public/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!--ate aqui-->
-
 </head>
 <body>
     <header>
@@ -23,13 +22,31 @@
         </nav>
     </header>
 
-    <section id="home">
-        <div class="home-container">
-            <h2 class="roboto-bold">Bem-vindo à Digital Drift</h2>
-            <p class="roboto-regular">Manutenção em computadores.</p>
-            <a href="../services/servicos.html" class="btn-primary">Conheça nossos serviços</a>
-        </div>
-    </section>
+    <header>
+        <h1>Manutenção de Computadores</h1>
+        </header>
+        <section class="perguntaaa">
+            <div class="form-container">
+                <h1>Informações sobre o problema</h1>
+                <h4>Por favor digite o problema</h4>
+                <form id="manutencaoForm">
+                    <input type="text" id="problema" name="problema" placeholder="Digite seu problema" required>
+                    <input type="hidden" id="servico" name="servico" value="manutenção de computadores"> <!-- Campo oculto para o serviço -->
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+           </section>
+            <script>
+                document.getElementById('manutencaoForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const problema = document.getElementById('problema').value;
+                    const servico = document.getElementById('servico').value;
+                    const queryParams = new URLSearchParams({ problema, servico }).toString();
+                    window.location.href = `nome_manu.html?${queryParams}`;
+                });
+            </script>
+        </body>
+
 
     <!-- esse codigo ai é para libras-->
     <div vw class="enabled">

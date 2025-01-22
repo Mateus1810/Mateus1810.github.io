@@ -8,7 +8,8 @@
 body {
     text-align: center;
     font-family: "Raleway", serif;
-    background-image: url('../src/img/1373383.png'); /* Substitua pelo seu fundo */
+    background-image: url('../src/img/1373383.png');
+    /* Substitua pelo seu fundo */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -17,7 +18,8 @@ body {
 /* Media Query para telas menores (telefone/celular) */
 @media (max-width: 768px) {
     body {
-        background-image: url('../src/img/7adbace9787dadcb1365f11917c8b6d6.jpg'); /* Fundo para celular */
+        background-image: url('../src/img/7adbace9787dadcb1365f11917c8b6d6.jpg');
+        /* Fundo para celular */
     }
 }
 
@@ -50,13 +52,15 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Ocupa a altura total da tela */
+    height: 80vh;
+    /* Ocupa a altura total da tela */
 
 }
 
 .home-container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para destacar o conteúdo */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro para destacar o conteúdo */
     padding: 30px;
     border-radius: 10px;
     max-width: 600px;
@@ -74,12 +78,17 @@ nav ul li a:hover {
 }
 
 /* Seção de Serviços (alterações para layout horizontal) */
-#servicos .catalogue { /* Alterado para #servicos .catalogue para especificar a div dentro da seção de serviços */
+#servicos .catalogue {
+    /* Alterado para #servicos .catalogue para especificar a div dentro da seção de serviços */
     display: flex;
-    flex-direction: row; /* Define a direção como horizontal (linha) */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 20px; /* Espaço entre os itens */
+    flex-direction: row;
+    /* Define a direção como horizontal (linha) */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha se não couberem */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    gap: 20px;
+    /* Espaço entre os itens */
     margin-top: 20px;
 }
 
@@ -88,10 +97,12 @@ nav ul li a:hover {
     border-radius: 5px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
-    width: 250px; /* Largura de cada item */
+    width: 250px;
+    /* Largura de cada item */
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin: 0; /* Removido o margin: 0 auto; pois o justify-content: center já centraliza */
+    margin: 0;
+    /* Removido o margin: 0 auto; pois o justify-content: center já centraliza */
 }
 
 .catalogue-item img {
@@ -107,9 +118,9 @@ nav ul li a:hover {
 }
 
 .catalogue-item button {
-    background-color: #26ab05;
+    background-color: #00ccff;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -132,8 +143,11 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #0090b3;
-    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+    background-color: #026780;
+    color: #ccc;
+    font-weight: bolder;
+    transform: scale(1.05);
+    /* Leve zoom ao passar o mouse */
 }
 
 .servicoss {
@@ -143,4 +157,51 @@ nav ul li a:hover {
     padding: 12px 24px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+
+    background-color: #00ccff;
+    font-weight: bold;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #026780;
+    color: #ccc;
+    font-weight: bolder;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.perguntaaa {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 100px auto;
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
+    max-width: 400px;
+    max-height: 230px;
+    /* Define a altura máxima */
+    flex-grow: 1;
+    /* Faz o section crescer para ocupar o espaço disponível */
 }
