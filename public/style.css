@@ -91,6 +91,8 @@ nav ul li a:hover {
     width: 250px;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza horizontalmente */
+   
 }
 
 .catalogue-item img {
@@ -119,7 +121,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-
 .btn-primary {
     font-weight: bold;
     text-decoration: none;
@@ -134,4 +135,13 @@ nav ul li a:hover {
 .btn-primary:hover {
     background-color: #0090b3;
     transform: scale(1.05); /* Leve zoom ao passar o mouse */
+}
+
+.servicoss {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px 24px;
+    border-radius: 5px;
+    display: inline-block;
 }
