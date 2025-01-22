@@ -9,14 +9,9 @@ const services = [
   },
   {
     href: "pergunta_intencao.html",
-    img: "img/pc-de-montagem-hardware-de-computador-pessoal_169241-849.jpg",
+    img: "../src/img/pc-de-montagem-hardware-de-computador-pessoal_169241-849.jpg",
     alt: "Ícone Montagem e Upgrade de Computadores",
     label: "Montagem e Upgrade de Computadores",
   },
-  {
-    href: "pergunt.html?servico=design%20grafico", // Corrigido para 'pergunta.html'
-    img: "img/em-breve (1).png",
-    alt: "Ícone Design Gráfico",
-    label: "EM BREVE",
-  },
+ 
 ];

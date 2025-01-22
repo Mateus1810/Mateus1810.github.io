@@ -14,8 +14,6 @@ body {
     color: #fff;
 }
 
- 
-
 /* Media Query para telas menores (telefone/celular) */
 @media (max-width: 768px) {
     body {
@@ -53,7 +51,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     height: 80vh; /* Ocupa a altura total da tela */
-   
+
 }
 
 .home-container {
@@ -75,11 +73,13 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-#catalogue {
+/* Seção de Serviços (alterações para layout horizontal) */
+#servicos .catalogue { /* Alterado para #servicos .catalogue para especificar a div dentro da seção de serviços */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row; /* Define a direção como horizontal (linha) */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre os itens */
     margin-top: 20px;
 }
 
@@ -87,12 +87,11 @@ nav ul li a:hover {
     border: 1px rgba(187, 187, 187, 1.0);
     border-radius: 5px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Manter a opacidade original */
-    width: 250px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 250px; /* Largura de cada item */
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centraliza horizontalmente */
-   
+    margin: 0; /* Removido o margin: 0 auto; pois o justify-content: center já centraliza */
 }
 
 .catalogue-item img {
