@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Digital Drift transforma suas ideias em soluções digitais criativas. Conheça nossos serviços de desenvolvimento e design.">
+    <title>Digital Drift - Upgrade</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h3 class="logo">Digital Drift</h3>
+        <nav>
+            <ul id="nav-list"></ul>
+        </nav>
+    </header>
+
+    <section id="upgrade">
+        <h2 class="isso" style="font-size: 2.0em;"><b>Upgrade de Computador</b></h2>
+        <div class="opcoes-upgrade">
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-processador" name="upgrade-option">
+                <label for="upgrade-processador">Processador</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-placa-mae" name="upgrade-option">
+                <label for="upgrade-placa-mae">Placa-Mãe</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-memoria" name="upgrade-option">
+                <label for="upgrade-memoria">Memória RAM</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-placa-video" name="upgrade-option">
+                <label for="upgrade-placa-video">Placa de Vídeo</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-ssd" name="upgrade-option">
+                <label for="upgrade-ssd">SSD</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-gabinete" name="upgrade-option">
+                <label for="upgrade-gabinete">Gabinete</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-cooler" name="upgrade-option">
+                <label for="upgrade-cooler">Cooler</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-fonte" name="upgrade-option">
+                <label for="upgrade-fonte">Fonte</label>
+            </div>
+            <div class="upgrade-option">
+                <input type="checkbox" id="upgrade-hd" name="upgrade-option">
+                <label for="upgrade-hd">HD</label>
+            </div>
+            
+        </div>
+        <div class="upgrade-container">
+            <label for="nome-cliente">Nome do Cliente:</label>
+            <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Digite seu nome" required>
+        </div>
+        <button id="enviar-upgrade"><b>Enviar Solicitação</b></button>
+    </section>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="../src/routes/routes.js"></script>
+    <script src="../src/controller/app.js"></script>
+    <script src="../src/routes/escolha.js"></script>
+    <script src="../src/controller/upgrade-controller.js"></script>
+</body>
+
+</html>

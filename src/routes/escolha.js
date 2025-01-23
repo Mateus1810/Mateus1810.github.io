@@ -8,7 +8,7 @@ const services = [
       label: "Montagem de Computador",
     },
     {
-      href: "../names/escolha.html",
+      href: "../services/upgrade.html",
       img: "../src/img/DALL·E 2025-01-22 23.42.29 - A minimalistic and modern illustration designed for a website, representing a PC upgrade service. The image features a stylized desktop PC with its ca.webp",
       alt: "Ícone Upgrade de computador",
       label: "Upgrade de computador",
