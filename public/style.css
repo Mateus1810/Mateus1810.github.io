@@ -287,3 +287,92 @@ nav ul li a:hover {
         font-size: 14px;
     }
 }
+
+/* ... (seu CSS anterior) ... */
+
+#upgrade {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 40px auto;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.opcoes-upgrade {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.upgrade-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #424242; /* Fundo para destacar a opção */
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.upgrade-option label {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#enviar-upgrade {
+    background-color: #00ccff;
+    color: black;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+/* ... (seu CSS anterior) ... */
+.upgrade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.upgrade-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.upgrade-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#enviar-upgrade:hover {
+    background-color: #026780;
+    color: #ccc;
+}
+/* Media query para a seção .upgrade */
+@media (max-width: 768px) {
+    .opcoes-upgrade {
+        flex-direction: column;
+    }
+}
+
+.isso {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center; /* Centraliza o texto */
+}
