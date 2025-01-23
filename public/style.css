@@ -165,6 +165,12 @@ nav ul li a:hover {
     align-items: center;
 }
 
+.clienteFrom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 button {
 
     background-color: #00ccff;
@@ -193,14 +199,14 @@ input[type="text"] {
 }
 
 .perguntaaa {
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.8);
-    margin: 100px auto;
-    border-radius: 5px;
+    margin: 110px auto;
+    border-radius: 10px;
     text-align: center;
     width: 50%;
     max-width: 400px;
-    max-height: 230px;
+    max-height: 530px;
     /* Define a altura máxima */
     flex-grow: 1;
     /* Faz o section crescer para ocupar o espaço disponível */
