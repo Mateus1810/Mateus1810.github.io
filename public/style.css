@@ -199,15 +199,25 @@ input[type="text"] {
 }
 
 .perguntaaa {
-    padding: 30px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
     margin: 110px auto;
     border-radius: 10px;
     text-align: center;
     width: 50%;
     max-width: 400px;
-    max-height: 530px;
+    max-height: 230px;
     /* Define a altura máxima */
     flex-grow: 1;
     /* Faz o section crescer para ocupar o espaço disponível */
+}
+
+@media (max-width: 768px) {
+    .perguntaaa {
+        font-size: 80%;
+        padding: 10px;
+        max-width: 500px;
+        max-height: 530px;
+        /* Fundo para celular */
+    }
 }
