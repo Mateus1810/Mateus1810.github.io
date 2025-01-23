@@ -159,6 +159,14 @@ nav ul li a:hover {
     display: inline-block;
 }
 
+@media (max-width: 768px) {
+    .servicoss {
+        margin-top: 30px;
+        font-size: 100%;
+    }
+}
+
+
 .form-container {
     display: flex;
     flex-direction: column;
