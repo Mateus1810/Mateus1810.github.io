@@ -377,3 +377,63 @@ nav ul li a:hover {
     text-align: center; /* Centraliza o texto */
 }
 
+.whatsapp-button {
+    background-color: #3cce48;
+    font-weight: bold;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; /* 10px em cima e em baixo, e 'auto' nas laterais para centralizar */
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin-bottom: 10px; /* Adiciona margem inferior de 20px */
+    display: block; /* Faz o botão ocupar a largura total */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    text-decoration: none;
+}
+
+.whatsapp-button:hover {
+    background-color: #2bff00;
+}
+
+.email-button {
+    background-color: #535353;
+    font-weight: bold;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; /* 10px em cima e em baixo, e 'auto' nas laterais para centralizar */
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin-bottom: 10px; /* Adiciona margem inferior de 20px */
+    display: block; /* Faz o botão ocupar a largura total */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    text-decoration: none;
+}
+
+.email-button:hover {
+    background-color: #323232;
+}
+
+.whatsapp-button:hover,
+.email-button:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+    transition: transform 0.2s ease;
+}
+
+/* Media query para a seção .upgrade */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        margin-bottom: 5px; /* Margem menor para telas menores */
+    }
+}
