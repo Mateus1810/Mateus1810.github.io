@@ -222,10 +222,15 @@ input[type="text"] {
 
 @media (max-width: 768px) {
     .perguntaaa {
-        font-size: 80%;
-        padding: 10px;
-        max-width: 500px;
-        max-height: 530px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 110px auto;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            min-height: 300px; /* Altura mínima opcional */
+     
         /* Fundo para celular */
     }
 }
