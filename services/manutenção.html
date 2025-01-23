@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!--pode copiar tudo-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Digital Drift transforma suas ideias em soluções digitais criativas. Conheça nossos serviços de desenvolvimento e design.">
@@ -9,59 +8,43 @@
     <link rel="stylesheet" href="../public/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!--ate aqui-->
 </head>
 <body>
     <header>
-        <h3>Digital Drift</h3>
+        <h3 class="logo">Digital Drift</h3>
         <nav>
-            <ul>
-               <ul id="nav-list"></ul> <!-- A lista de rotas será gerada aqui -->
-            </ul>
+            <ul id="nav-list"></ul>
         </nav>
     </header>
 
-    <header>
-        <h1>Manutenção de Computadores</h1>
-        </header>
-        <section class="perguntaaa">
-            <div class="form-container">
-                <h1>Informações sobre o problema</h1>
-                <h4>Por favor digite o problema</h4>
-                <form id="manutencaoForm">
-                    <input type="text" id="problema" name="problema" placeholder="Digite seu problema" required>
-                    <input type="hidden" id="servico" name="servico" value="manutenção de computadores"> <!-- Campo oculto para o serviço -->
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-           </section>
-            <script>
-                document.getElementById('manutencaoForm').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    const problema = document.getElementById('problema').value;
-                    const servico = document.getElementById('servico').value;
-                    const queryParams = new URLSearchParams({ problema, servico }).toString();
-                    window.location.href = `nome_manu.html?${queryParams}`;
-                });
-            </script>
-        </body>
+    <section id="servicos">
+        <h2 class="servicoss"style= "font-size: 2.0em;"><b>Manutenção de Computadores</b></h2>
 
+    <section class="perguntaaa">
+        <div class="form-container">
+            <h1>Informações sobre o problema</h1>
+            <h4>Por favor digite o problema</h4>
+            <form id="manutencaoForm">
+                <input type="text" id="problema" name="problema" placeholder="Digite seu problema" required>
+                <input type="hidden" id="servico" name="servico" value="manutenção de computadores"> <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
 
-    <!-- esse codigo ai é para libras-->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
-    <!--aqui nao é as libras mais mas pode copiar para adiantar a vida-->
+    </script>
+    
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
+    <script src="../src/controller/formManutencao.js"></script> 
 
 </body>
 </html>
