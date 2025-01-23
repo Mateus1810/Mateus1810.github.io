@@ -15,37 +15,26 @@
         <nav>
             <ul id="nav-list"></ul>
         </nav>
+
     </header>
 
     <section id="servicos">
-        <h2 class="servicoss"><b>Manutenção de Computadores</b></h2>
+        <h2 class="servicoss"><b>Montagem de Computador</b></h2>
     </section>
 
     <section class="perguntaaa">
-        <div class="form-container">
-            <h1>Informações sobre o problema</h1>
-            <h4>Por favor digite o problema</h4>
-            <form id="manutencaoForm">
-                <input type="text" id="problema" name="problema" placeholder="Digite seu problema" required>
-                <input type="hidden" id="servico" name="servico" value="manutenção de computadores"> <button type="submit">Enviar</button>
+        
+            <h3>Informações do Cliente</h3>
+            <form id="clientForm">
+                <label for="clientName">Nome:</label>
+                <input type="text" id="clientName" name="clientName" placeholder="Digite seu nome" required>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
 
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
-    <script src="../src/controller/formManutencao.js"></script> 
-
+    <script src="../src/controller/formCliente.js"></script>
 </body>
 </html>
