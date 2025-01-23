@@ -157,15 +157,32 @@ nav ul li a:hover {
     padding: 12px 24px;
     border-radius: 5px;
     display: inline-block;
+    text-align: center; /* Centraliza o texto */
 }
 
+/* Media query para a seção .servicos */
 @media (max-width: 768px) {
     .servicoss {
         margin-top: 30px;
-        font-size: 100%;
+        font-size: 115%;
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
+.perguntaaa > div {
+    /* Centraliza o conteúdo do div interno horizontalmente */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+.perguntaaa button, .perguntaaa p {
+    text-align: center; /* Garante que o texto dentro dos botões e do parágrafo também esteja centralizado */
+}
 
 .form-container {
     display: flex;
@@ -179,8 +196,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
-button {
-
+.perguntaaa button {
     background-color: #00ccff;
     font-weight: bold;
     border: none;
@@ -192,13 +208,26 @@ button {
     margin: 10px 0;
 }
 
-button:hover {
+.perguntaaa #enviarPecasCliente{
+    margin-top: 35px;
+}
+
+.perguntaaa button:hover {
     background-color: #026780;
     color: #ccc;
     font-weight: bolder;
 }
 
-input[type="text"] {
+.perguntaaa input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.perguntaaa input[type="text"] {
     width: 80%;
     padding: 10px;
     margin: 10px 0;
@@ -207,30 +236,54 @@ input[type="text"] {
 }
 
 .perguntaaa {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.8);
     margin: 110px auto;
     border-radius: 10px;
     text-align: center;
-    width: 70%;
-    max-width: 400px;
-    max-height: 230px;
-    /* Define a altura máxima */
-    flex-grow: 1;
-    /* Faz o section crescer para ocupar o espaço disponível */
+    width: 80%;
+    max-width: 500px;
+    
 }
 
+.perguntaaa h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.perguntaaa label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Media query para a seção .perguntaaa */
 @media (max-width: 768px) {
     .perguntaaa {
-            padding: 30px;
-            background-color: rgba(0, 0, 0, 0.8);
-            margin: 110px auto;
-            border-radius: 10px;
-            text-align: center;
-            width: 80%;
-            max-width: 600px;
-            min-height: 300px; /* Altura mínima opcional */
-     
-        /* Fundo para celular */
+        width: 95%;
+        padding: 20px;
+        margin: 110px auto;
+    }
+
+    .perguntaaa input[type="text"],
+    .perguntaaa input[type="number"] {
+        font-size: 14px;
+    }
+
+    .perguntaaa button[type="submit"],
+    .perguntaaa button[type="button"] {
+        font-size: 16px;
+    }
+
+    .perguntaaa h3 {
+        font-size: 20px;
+    }
+
+    .perguntaaa label {
+        font-size: 14px;
     }
 }

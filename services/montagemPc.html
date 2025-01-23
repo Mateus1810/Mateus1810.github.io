@@ -15,26 +15,42 @@
         <nav>
             <ul id="nav-list"></ul>
         </nav>
-
     </header>
 
-    <section id="servicos">
-        <h2 class="servicoss"><b>Montagem de Computador</b></h2>
-    </section>
-
     <section class="perguntaaa">
-        
+        <div>
             <h3>Informações do Cliente</h3>
+
+            <button type="button" id="toggleFormButton">Alternar Opção de Montagem</button>
+            <p id="textoOpcao">Opção atual: <b>Montar com Peças da Loja</b></p>
+
             <form id="clientForm">
-                <label for="clientName">Nome:</label>
-                <input type="text" id="clientName" name="clientName" placeholder="Digite seu nome" required>
-                <button type="submit">Enviar</button>
+                <label for="uso">Intenção de Uso:</label>
+                <input type="text" id="uso" name="uso" placeholder="Ex: Jogos, Trabalho, Estudos" required>
+
+                <p><label for="valor">Valor em Mente (R$):</label></p>
+                <input type="number" id="valor" name="valor" placeholder="Ex: 3000" required>
+
+                <button type="submit">Enviar (Peças da Loja)</button>
             </form>
+
+            <button class="centro" type="button" id="enviarPecasCliente" style="display: none;">Enviar (Peças do Cliente)</button>
         </div>
     </section>
 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
-    <script src="../src/controller/formClienteMontagem.js"></script>
+    <script src="../src/controller/formMontagem.js"></script>
 </body>
 </html>
