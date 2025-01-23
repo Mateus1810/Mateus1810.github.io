@@ -96,7 +96,7 @@ nav ul li a:hover {
     border: 1px rgba(187, 187, 187, 1.0);
     border-radius: 5px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 250px;
     /* Largura de cada item */
     padding: 10px;
@@ -376,3 +376,4 @@ nav ul li a:hover {
     display: inline-block;
     text-align: center; /* Centraliza o texto */
 }
+
