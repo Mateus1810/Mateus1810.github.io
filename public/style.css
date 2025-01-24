@@ -385,9 +385,6 @@ nav ul li a:hover {
     width: 95%; /* Largura um pouco menor que o form de upgrade */
     max-width: 400px; /* Largura máxima */
     margin: 40px auto; /* Centraliza na tela */
-    
-  
-    
 }
 
 .consulta-info h3 {
@@ -437,12 +434,15 @@ nav ul li a:hover {
     width: 95%; /* Largura do botão */
     font-weight: bold;
     margin-bottom: 10px;
+    font-size: 15px; /* Adicione esta linha */
 }
 
 .consulta-info button[type="submit"]:hover,
 .consulta-info button[type="button"]:hover {
     background-color: #026780; /* Cor do botão no hover */
     color: #ccc; /* Cor do texto do botão no hover */
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
 
 .consulta-info #enviarPecasCliente {
@@ -550,7 +550,7 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%;
-    font-size: 14px; /* Diminuir um pouco o tamanho da fonte */
+    font-size: 15px; /* Diminuir um pouco o tamanho da fonte */
 }
 
 .botoes-upgrade button:hover {
@@ -589,12 +589,15 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%;
+    font-size: 16px; /* Adicione esta linha */
     font-weight: bold;
 }
 
 .form-upgrade button[type="submit"]:hover {
     background-color: #026780;
     color: #ccc;
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
 
 /* Media Query para telas menores */
