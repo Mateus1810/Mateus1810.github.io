@@ -560,10 +560,7 @@ nav ul li a:hover {
     font-size: 15px; /* Diminuir um pouco o tamanho da fonte */
 }
 
-.botoes-upgrade button:hover {
-    background-color: #00ccff;
-    color: #000;
-}
+
 
 .botoes-upgrade button.selecionado {
     background-color: #00ccff;
