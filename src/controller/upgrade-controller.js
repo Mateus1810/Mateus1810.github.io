@@ -15,11 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Adicionar ou remover upgrade da lista
             if (upgradesSelecionados.includes(upgrade)) {
+                // Se o upgrade já estiver na lista, remove ele
                 upgradesSelecionados = upgradesSelecionados.filter((item) => item !== upgrade);
-                this.classList.remove('selecionado'); // Remove estilo selecionado
+                this.classList.remove('selecionado'); // Remove o estilo de seleção
             } else {
+                // Se não estiver na lista, adiciona
                 upgradesSelecionados.push(upgrade);
-                this.classList.add('selecionado'); // Adiciona estilo selecionado
+                this.classList.add('selecionado'); // Adiciona o estilo de seleção
             }
         });
     });
