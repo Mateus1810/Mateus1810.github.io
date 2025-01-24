@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Digital Drift transforma suas ideias em soluções digitais criativas. Conheça nossos serviços de desenvolvimento e design.">
+    <meta name="description"
+        content="Digital Drift transforma suas ideias em soluções digitais criativas. Conheça nossos serviços de desenvolvimento e design.">
     <title>Digital Drift</title>
     <link rel="stylesheet" href="../public/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h3 class="logo">Digital Drift</h3>
@@ -18,33 +22,65 @@
     </header>
 
     <section id="servicos">
-        <h2 class="servicoss"style= "font-size: 2.0em;"><b>Montagem de Computador</b></h2>
+        <h2 class="servicoss" style="font-size: 2.0em;"><b>Montagem de Computador</b></h2>
     </section>
 
     <section class="consulta-info">
         <div>
             <h3>Informações do Cliente</h3>
 
-            <button type="button" id="toggleFormButton">Alternar Opção de Montagem</button>
-            <p id="textoOpcao">Opção atual: <b>Montar com Peças da Loja</b></p>
-
-            <label for="nome-cliente">Seu Nome:</label>
-            <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Digite seu nome">
+            <div class="opcao-montagem">
+                <p style="margin-bottom: 10px;">Alternar Opção de Montagem:</p>
+                <button type="button" id="toggleFormButton">
+                    <span id="textoOpcao">Montar com Peças da Loja</span>
+                </button>
+                <p>
+                    Você pode escolher montar com peças da nossa loja ou trazer as suas próprias peças.
+                </p>
+            </div>
 
             <form id="clientForm">
-                <label for="uso">Intenção de Uso:</label>
-                <input type="text" id="uso" name="uso" placeholder="Ex: Jogos, Trabalho, Estudos" required>
+                <label style="margin-top: 12px" for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome">
+
+                <label for="telefone">Telefone/WhatsApp:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="( ) _____-____">
+
+                <label>Intenção de Uso:</label>
+                <div class="checkbox-group">
+                    <label for="jogos"><input type="checkbox" id="jogos" name="uso[]" value="Jogos"> Jogos</label>
+                    <label for="trabalho"><input type="checkbox" id="trabalho" name="uso[]" value="Trabalho">
+                        Trabalho</label>
+                    <label for="estudos"><input type="checkbox" id="estudos" name="uso[]" value="Estudos">
+                        Estudos</label>
+                    <label for="edicao"><input type="checkbox" id="edicao" name="uso[]"
+                            value="Edição de Vídeo/Imagem"> Edição de Vídeo/Imagem</label>
+                    <label for="programacao"><input type="checkbox" id="programacao" name="uso[]"
+                            value="Programação"> Programação</label>
+                    <label for="domestico"><input type="checkbox" id="domestico" name="uso[]"
+                            value="Uso Doméstico/Navegação na Internet"> Uso
+                        Doméstico/Navegação na Internet</label>
+                    <label for="outros"><input type="checkbox" id="outros" name="uso[]" value="Outros"> Outros:</label>
+                    <input type="text" id="outros-texto" name="outros-texto" placeholder="Especifique">
+                </div>
 
                 <label for="faixa-preco">Faixa de Preço (R$):</label>
                 <div class="faixa-preco-container">
-                    <input type="number" id="preco-min" name="preco-min" placeholder="Valor Mínimo" required>
-                    <input type="number" id="preco-max" name="preco-max" placeholder="Valor Máximo" required>
+                    <input type="number" id="preco-min" name="preco-min" placeholder="Valor Mínimo (Ex: 2000)">
+                    <input type="number" id="preco-max" name="preco-max" placeholder="Valor Máximo (Ex: 5000)">
                 </div>
 
-                <button type="submit">Enviar (Peças da Loja)</button>
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes" placeholder="Espaço para informações adicionais"></textarea>
+
+                <button type="submit" id="submit-button">Enviar (Peças da loja)</button>
             </form>
 
-            <button class="centro" type="button" id="enviarPecasCliente" style="display: none;">Enviar (Peças do Cliente)</button>
+            <button class="centro" type="button" id="enviarPecasCliente" style="display: none;">Enviar (Peças do
+                Cliente)</button>
         </div>
     </section>
 
@@ -61,5 +97,7 @@
 
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
-    <script src="../src/controller/formMontagem.js"></script> </body>
+    <script src="../src/controller/formMontagem.js"></script>
+</body>
+
 </html>

@@ -8,7 +8,7 @@ const services = [
     label: "Manutenção de Computadores",
   },
   {
-    href: "../names/escolha.html",
+    href: "../pages/escolha.html",
     img: "../src/img/pc-de-montagem-hardware-de-computador-pessoal_169241-849.jpg",
     alt: "Ícone Montagem e Upgrade de Computadores",
     label: "Montagem e Upgrade de Computadores",

@@ -619,3 +619,79 @@ nav ul li a:hover {
         grid-template-columns: repeat(1, 1fr); /* 1 coluna em telas menores que 455px */
     }
 }
+
+/* ... seu CSS anterior ... */
+
+.consulta-info input[type="tel"],
+.consulta-info input[type="email"],
+.consulta-info textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #00ccff;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.consulta-info textarea {
+    min-height: 100px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#outros-texto {
+    margin-top: 5px;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#toggleFormButton {
+    position: relative; /* Para o tooltip */
+}
+
+#textoOpcao {
+    margin-left: 10px; /* Espaço entre o texto e o botão */
+}
