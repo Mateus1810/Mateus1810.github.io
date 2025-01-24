@@ -19,6 +19,7 @@ body {
 /* Media Query para telas menores (telefone/celular) */
 @media (max-width: 768px) {
     body {
+        margin: auto;
         background-image: url('../src/img/7adbace9787dadcb1365f11917c8b6d6.jpg');
         /* Fundo para celular */
     }
@@ -78,6 +79,12 @@ nav ul li a:hover {
 .home-container p {
     font-size: 1.2em;
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        transform: translateY(-50px);
+    }
 }
 
 /* Seção de Serviços (alterações para layout horizontal) */
