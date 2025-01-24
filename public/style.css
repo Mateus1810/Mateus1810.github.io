@@ -9,10 +9,11 @@ body {
     text-align: center;
     font-family: "Raleway", serif;
     background-image: url('../src/img/1373383.png');
-    /* Substitua pelo seu fundo */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: #fff;
+    padding-top: 60px; /* Ajuste conforme altura do header */
 }
 
 /* Media Query para telas menores (telefone/celular) */
@@ -27,6 +28,11 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 nav ul {
@@ -52,15 +58,12 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    /* Ocupa a altura total da tela */
-
+    min-height: 100vh;
 }
 
 .home-container {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
-    /* Fundo escuro para destacar o conteúdo */
     padding: 30px;
     border-radius: 10px;
     max-width: 600px;
@@ -79,16 +82,11 @@ nav ul li a:hover {
 
 /* Seção de Serviços (alterações para layout horizontal) */
 #servicos .catalogue {
-    /* Alterado para #servicos .catalogue para especificar a div dentro da seção de serviços */
     display: flex;
     flex-direction: row;
-    /* Define a direção como horizontal (linha) */
     flex-wrap: wrap;
-    /* Permite que os itens quebrem para a próxima linha se não couberem */
     justify-content: center;
-    /* Centraliza os itens horizontalmente */
     gap: 20px;
-    /* Espaço entre os itens */
     margin-top: 20px;
 }
 
@@ -98,11 +96,9 @@ nav ul li a:hover {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     width: 250px;
-    /* Largura de cada item */
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 0;
-    /* Removido o margin: 0 auto; pois o justify-content: center já centraliza */
 }
 
 .catalogue-item img {
@@ -129,6 +125,14 @@ nav ul li a:hover {
     font-size: 16px;
     border-radius: 0 0 5px 5px;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.catalogue-item button:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+    background-color: #026780;
+    color:#ccc;
 }
 
 .btn-primary {
@@ -147,7 +151,6 @@ nav ul li a:hover {
     color: #ccc;
     font-weight: bolder;
     transform: scale(1.05);
-    /* Leve zoom ao passar o mouse */
 }
 
 .servicoss {
@@ -157,7 +160,7 @@ nav ul li a:hover {
     padding: 12px 24px;
     border-radius: 5px;
     display: inline-block;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
 }
 
 /* Media query para a seção .servicos */
@@ -172,171 +175,104 @@ nav ul li a:hover {
     }
 }
 
-.perguntaaa > div {
-    /* Centraliza o conteúdo do div interno horizontalmente */
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-}
-
-.perguntaaa button, .perguntaaa p {
-    text-align: center; /* Garante que o texto dentro dos botões e do parágrafo também esteja centralizado */
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.clienteFrom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.perguntaaa button {
-    background-color: #00ccff;
-    font-weight: bold;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 0;
-}
-
-.perguntaaa #enviarPecasCliente{
-    margin-top: 35px;
-}
-
-.perguntaaa button:hover {
-    background-color: #026780;
-    color: #ccc;
-    font-weight: bolder;
-}
-
-.perguntaaa input[type="number"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-.perguntaaa input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
+/* Formulário de Manutenção de Computadores */
 .perguntaaa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
     background-color: rgba(0, 0, 0, 0.8);
-    margin: 110px auto;
+    border: none;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 80%;
     max-width: 500px;
-    
-}
-
-.perguntaaa h3 {
-    margin-bottom: 20px;
-    font-size: 22px;
-}
-
-.perguntaaa label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-/* Media query para a seção .perguntaaa */
-@media (max-width: 768px) {
-    .perguntaaa {
-        width: 95%;
-        padding: 20px;
-        margin: 110px auto;
-    }
-
-    .perguntaaa input[type="text"],
-    .perguntaaa input[type="number"] {
-        font-size: 14px;
-    }
-
-    .perguntaaa button[type="submit"],
-    .perguntaaa button[type="button"] {
-        font-size: 16px;
-    }
-
-    .perguntaaa h3 {
-        font-size: 20px;
-    }
-
-    .perguntaaa label {
-        font-size: 14px;
-    }
-}
-
-/* ... (seu CSS anterior) ... */
-
-#upgrade {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
     margin: 40px auto;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 600px;
 }
 
-.opcoes-upgrade {
+.perguntaaa .form-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perguntaaa h1 {
+    color: #00ccff;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.upgrade-option {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: #424242; /* Fundo para destacar a opção */
-    padding: 8px 12px;
-    border-radius: 5px;
+.perguntaaa h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.upgrade-option label {
+.botoes-problema {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-items: center;
+}
+
+.botoes-problema button {
+    background-color: #222;
+    border: 1px solid #00ccff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.botoes-problema button:hover {
+    background-color: #00ccff;
+    color: #000;
+}
+
+.perguntaaa input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #00ccff;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.perguntaaa button[type="submit"] {
+    background-color: #00ccff;
+    border: none;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
     font-weight: bold;
 }
 
-#enviar-upgrade {
-    background-color: #00ccff;
-    color: black;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 20px;
+.perguntaaa button[type="submit"]:hover {
+    background-color: #026780;
+    color: #ccc;
 }
 
-/* ... (seu CSS anterior) ... */
+@media (max-width: 768px) {
+    .botoes-problema {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .perguntaaa input[type="text"] {
+        width: 90%;
+    }
+}
+
+@media (max-width: 455px) {
+    .botoes-problema {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Restante do CSS (formulário de upgrade, etc.) */
+
 .upgrade-container {
     display: flex;
     flex-direction: column;
@@ -362,6 +298,7 @@ nav ul li a:hover {
     background-color: #026780;
     color: #ccc;
 }
+
 /* Media query para a seção .upgrade */
 @media (max-width: 768px) {
     .opcoes-upgrade {
@@ -374,7 +311,7 @@ nav ul li a:hover {
     margin-bottom: 40px;
     border-radius: 5px;
     display: inline-block;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
 }
 
 .whatsapp-button {
@@ -386,14 +323,14 @@ nav ul li a:hover {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px; /* 10px em cima e em baixo, e 'auto' nas laterais para centralizar */
-    width: 80%; /* Ajuste a largura conforme necessário */
-    margin-bottom: 10px; /* Adiciona margem inferior de 20px */
-    display: block; /* Faz o botão ocupar a largura total */
-    text-align: center; /* Centraliza o texto dentro do botão */
-    width: fit-content; /* Ajusta a largura ao conteúdo */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+    margin: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
 }
 
@@ -410,14 +347,14 @@ nav ul li a:hover {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px; /* 10px em cima e em baixo, e 'auto' nas laterais para centralizar */
-    width: 80%; /* Ajuste a largura conforme necessário */
-    margin-bottom: 10px; /* Adiciona margem inferior de 20px */
-    display: block; /* Faz o botão ocupar a largura total */
-    text-align: center; /* Centraliza o texto dentro do botão */
-    width: fit-content; /* Ajusta a largura ao conteúdo */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+    margin: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
 }
 
@@ -427,7 +364,7 @@ nav ul li a:hover {
 
 .whatsapp-button:hover,
 .email-button:hover {
-    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+    transform: scale(1.05);
     transition: transform 0.2s ease;
 }
 
@@ -435,5 +372,243 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .whatsapp-button {
         margin-bottom: 5px; /* Margem menor para telas menores */
+    }
+}
+
+/* Formulário de Montagem de Computadores (Peças da Loja/Cliente) */
+.consulta-info {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    border: none; /* Sem borda */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 95%; /* Largura um pouco menor que o form de upgrade */
+    max-width: 400px; /* Largura máxima */
+    margin: 40px auto; /* Centraliza na tela */
+    
+  
+    
+}
+
+.consulta-info h3 {
+    color: #00ccff; /* Cor do título principal */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.consulta-info label {
+    color: #fff; /* Cor dos labels */
+    margin-top: 10px; /* Espaço acima do label */
+    margin-bottom: 5px; /* Espaço abaixo do label */
+    font-weight: bold;
+    display: block; /* Faz o label quebrar linha */
+}
+
+.consulta-info input[type="text"],
+.consulta-info input[type="number"] {
+    width: 95%; /* Largura dos campos de texto e número */
+    padding: 10px;
+    border: 1px solid #00ccff; /* Borda azul */
+    border-radius: 5px;
+    background-color: #222; /* Fundo escuro */
+    color: #fff; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo dos campos */
+}
+
+.consulta-info .faixa-preco-container {
+    display: flex; /* Organiza os campos de preço lado a lado */
+    gap: 10px; /* Espaço entre os campos */
+    justify-content: center; /* Centraliza os campos */
+}
+
+.consulta-info .faixa-preco-container input {
+    width: 45%; /* Largura dos campos de preço */
+}
+
+.consulta-info button[type="submit"],
+.consulta-info button[type="button"] {
+    background-color: #00ccff; /* Cor de fundo do botão */
+    border: none;
+    color: #000; /* Cor do texto do botão */
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 95%; /* Largura do botão */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.consulta-info button[type="submit"]:hover,
+.consulta-info button[type="button"]:hover {
+    background-color: #026780; /* Cor do botão no hover */
+    color: #ccc; /* Cor do texto do botão no hover */
+}
+
+.consulta-info #enviarPecasCliente {
+    margin-top: 20px; /* Espaço acima do botão "Peças do Cliente" */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .consulta-info {
+        width: 98%; /* Aumenta a largura em telas menores */
+        padding: 15px; /* Reduz o padding em telas menores */
+    }
+
+    .consulta-info input[type="text"],
+    .consulta-info input[type="number"] {
+        width: 100%; /* Largura total em telas menores */
+    }
+
+    .consulta-info .faixa-preco-container input {
+        width: 48%; /* Ajusta a largura dos campos de preço em telas menores */
+    }
+}
+
+/* Media query para a seção .consulta-info */
+@media (max-width: 768px) {
+    .consulta-info {
+        width: 95%;
+        padding: 20px;
+        margin: 110px auto;
+    }
+
+    .consulta-info input[type="text"],
+    .consulta-info input[type="number"] {
+        font-size: 14px;
+    }
+
+    .consulta-info button[type="submit"],
+    .consulta-info button[type="button"] {
+        font-size: 16px;
+    }
+
+    .consulta-info h3 {
+        font-size: 20px;
+    }
+
+    .consulta-info label {
+        font-size: 14px;
+    }
+}
+
+.faixa-preco-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.faixa-preco-container input[type="number"] {
+    width: 40%;
+}
+
+.form-upgrade {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.form-upgrade h1 { /* Não tem um h1 no seu HTML de upgrade, então pode remover ou ajustar para h2, se for o caso */
+    color: #00ccff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-upgrade h2 { /* Ajuste para o h2 do seu HTML de upgrade */
+    color: #00ccff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-upgrade h4 { /* Não tem um h4 no seu HTML de upgrade, então pode remover ou ajustar se necessário */
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para os checkboxes de upgrade - Ajuste para os botões */
+.botoes-upgrade { /* Use a classe botoes-upgrade */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-items: center;
+}
+
+.botoes-upgrade button { /* Estilize os botões */
+    background-color: #222;
+    border: 1px solid #00ccff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 14px; /* Diminuir um pouco o tamanho da fonte */
+}
+
+.botoes-upgrade button:hover {
+    background-color: #00ccff;
+    color: #000;
+}
+
+.botoes-upgrade button.selecionado {
+    background-color: #00ccff;
+    color: #000;
+}
+
+/* Estilos para o campo de nome do cliente */
+.form-upgrade label {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.form-upgrade input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00ccff;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o botão de envio */
+.form-upgrade button[type="submit"] {
+    background-color: #00ccff;
+    border: none;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-weight: bold;
+}
+
+.form-upgrade button[type="submit"]:hover {
+    background-color: #026780;
+    color: #ccc;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .botoes-upgrade {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+    .form-upgrade input[type="text"] {
+        width: 90%;
+    }
+}
+
+@media (max-width: 455px) {
+    .botoes-upgrade {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna em telas menores que 455px */
     }
 }

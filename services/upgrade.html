@@ -21,52 +21,24 @@
         </nav>
     </header>
 
-    <section id="upgrade">
+    <section id="upgrade" class="form-upgrade">
         <h2 class="isso" style="font-size: 2.0em;"><b>Upgrade de Computador</b></h2>
-        <div class="opcoes-upgrade">
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-processador" name="upgrade-option">
-                <label for="upgrade-processador">Processador</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-placa-mae" name="upgrade-option">
-                <label for="upgrade-placa-mae">Placa-Mãe</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-memoria" name="upgrade-option">
-                <label for="upgrade-memoria">Memória RAM</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-placa-video" name="upgrade-option">
-                <label for="upgrade-placa-video">Placa de Vídeo</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-ssd" name="upgrade-option">
-                <label for="upgrade-ssd">SSD</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-gabinete" name="upgrade-option">
-                <label for="upgrade-gabinete">Gabinete</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-cooler" name="upgrade-option">
-                <label for="upgrade-cooler">Cooler</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-fonte" name="upgrade-option">
-                <label for="upgrade-fonte">Fonte</label>
-            </div>
-            <div class="upgrade-option">
-                <input type="checkbox" id="upgrade-hd" name="upgrade-option">
-                <label for="upgrade-hd">HD</label>
-            </div>
-            
+        <div class="botoes-upgrade">
+            <button type="button" data-upgrade="Processador">Processador</button>
+            <button type="button" data-upgrade="Placa-Mãe">Placa-Mãe</button>
+            <button type="button" data-upgrade="Memória RAM">Memória RAM</button>
+            <button type="button" data-upgrade="Placa de Vídeo">Placa de Vídeo</button>
+            <button type="button" data-upgrade="SSD">SSD</button>
+            <button type="button" data-upgrade="Gabinete">Gabinete</button>
+            <button type="button" data-upgrade="Cooler">Cooler</button>
+            <button type="button" data-upgrade="Fonte">Fonte</button>
+            <button type="button" data-upgrade="HD">HD</button>
         </div>
         <div class="upgrade-container">
             <label for="nome-cliente">Nome do Cliente:</label>
             <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Digite seu nome" required>
         </div>
-        <button id="enviar-upgrade"><b>Enviar Solicitação</b></button>
+        <button id="enviar-upgrade" type="submit"><b>Enviar Solicitação</b></button>
     </section>
 
     <div vw class="enabled">
@@ -81,7 +53,6 @@
     </script>
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
-    <script src="../src/routes/escolha.js"></script>
     <script src="../src/controller/upgrade-controller.js"></script>
 </body>
 

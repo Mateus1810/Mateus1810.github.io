@@ -17,19 +17,25 @@
         </nav>
     </header>
 
-    <section class="perguntaaa">
+    <section class="consulta-info">
         <div>
             <h3>Informações do Cliente</h3>
 
             <button type="button" id="toggleFormButton">Alternar Opção de Montagem</button>
             <p id="textoOpcao">Opção atual: <b>Montar com Peças da Loja</b></p>
 
+            <label for="nome-cliente">Seu Nome:</label>
+            <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Digite seu nome">
+
             <form id="clientForm">
                 <label for="uso">Intenção de Uso:</label>
                 <input type="text" id="uso" name="uso" placeholder="Ex: Jogos, Trabalho, Estudos" required>
 
-                <p><label for="valor">Valor em Mente (R$):</label></p>
-                <input type="number" id="valor" name="valor" placeholder="Ex: 3000" required>
+                <label for="faixa-preco">Faixa de Preço (R$):</label>
+                <div class="faixa-preco-container">
+                    <input type="number" id="preco-min" name="preco-min" placeholder="Valor Mínimo" required>
+                    <input type="number" id="preco-max" name="preco-max" placeholder="Valor Máximo" required>
+                </div>
 
                 <button type="submit">Enviar (Peças da Loja)</button>
             </form>
@@ -51,6 +57,5 @@
 
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
-    <script src="../src/controller/formMontagem.js"></script>
-</body>
+    <script src="../src/controller/formMontagem.js"></script> </body>
 </html>

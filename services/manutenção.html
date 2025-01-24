@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Digital Drift transforma suas ideias em soluções digitais criativas. Conheça nossos serviços de desenvolvimento e design.">
-    <title>Digital Drift</title>
+    <meta name="description"
+        content="Digital Drift oferece serviços de manutenção para computadores e dispositivos digitais. Confie em nossos especialistas!">
+    <title>Digital Drift - Manutenção</title>
     <link rel="stylesheet" href="../public/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h3 class="logo">Digital Drift</h3>
@@ -17,19 +21,33 @@
         </nav>
     </header>
 
-    <section id="servicos">
-        <h2 class="servicoss"><b>Manutenção de Computadores</b></h2>
-    </section>
+    <section id="upgrade" class="form-upgrade">
+        <h2 class="isso" style="font-size: 2.0em;"><b>Upgrade de Computador</b></h2>
+        <div class="botoes-upgrade">
+            <!-- Manutenção Física e Limpeza -->
+            <button type="button" data-upgrade="Limpeza Interna">Limpeza Interna</button>
+            <button type="button" data-upgrade="Limpeza Preventiva">Limpeza Preventiva</button>
+            <button type="button" data-upgrade="Troca de Pasta Térmica">Troca de Pasta Térmica</button>
+            <button type="button" data-upgrade="Limpeza completa de cooler e ventoinhas">Limpeza completa</button>
+            <!-- <button type="button" data-upgrade="Troca de filtro de poeira">Troca de Filtro de Poeira</button> -->
+            <button type="button" data-upgrade="Organização de cabos internos">Organização de Cabos Internos</button>
 
-    <section class="perguntaaa">
-        <div class="form-container">
-            <h1>Informações sobre o problema</h1>
-            <h4>Por favor digite o problema</h4>
-            <form id="manutencaoForm">
-                <input type="text" id="problema" name="problema" placeholder="Digite seu problema" required>
-                <input type="hidden" id="servico" name="servico" value="manutenção de computadores"> <button type="submit">Enviar</button>
-            </form>
+            <!-- Manutenção e Otimização de Software -->
+            <button type="button" data-upgrade="Instalação de drivers">Instalação de Drivers</button>
+            <button type="button" data-upgrade="Remoção de vírus e malwares">Remoção de Vírus e Malwares</button>
+            <button type="button" data-upgrade="Instalação de programas básicos">Instalação de Programas Básicos</button>
+            <!-- <button type="button" data-upgrade="Configuração de inicialização rápida">Configuração de Inicialização Rápida</button> -->
+
         </div>
+        </div>
+        <div class="upgrade-container">
+            <label for="serv-Outro">Outro(s):</label>
+            <input type="text" id="serv-Outro" name="serv-Outro" placeholder="Digite outros serviços">
+        
+            <label for="nome-cliente">Nome do Cliente:</label>
+            <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Digite seu nome" required>
+        </div>        
+        <button id="enviar-upgrade" type="submit">Enviar</button>
     </section>
 
     <div vw class="enabled">
@@ -42,10 +60,9 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
-    <script src="../src/controller/formManutencao.js"></script> 
+    <script src="../src/controller/upgrade-controller.js"></script>
+    </body>
 
-</body>
 </html>
