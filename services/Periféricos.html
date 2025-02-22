@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Drift oferece serviços de manutenção para computadores.">
+    <title>Digital Drift - Upgrade</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h3 class="logo">Digital Drift</h3>
+        <nav>
+            <ul id="nav-list"></ul>
+        </nav>
+    </header>
+
+    <section id="upgrade" class="form-upgrade">
+        <h2 class="isso" style="font-size: 2.0em;"><b>Upgrade de Computador</b></h2>
+        <div class="botoes-upgrade">
+            <button type="button" data-upgrade="Mouse">Mouse</button>
+            <button type="button" data-upgrade="Teclado">Teclado</button>
+            <button type="button" data-upgrade="Monitor">Monitor</button>
+            <button type="button" data-upgrade="Headset">Headset</button>
+            <button type="button" data-upgrade="Fone de Ouvido">Fone de Ouvido</button>
+            <button type="button" data-upgrade="Mousepad">Mousepad</button>
+            <button type="button" data-upgrade="Webcam">Webcam</button>
+            <button type="button" data-upgrade="Microfone">Microfone</button>
+            <button type="button" data-upgrade="Caixas de Som">Caixas de Som</button>
+            <button type="button" data-upgrade="Controle para PC">Controle para PC</button>            
+        </div>
+        <p><b>Caso não encontre o que deseja, informe no campo "Outros"</b></p>
+        <div class="upgrade-container">
+            <label for="serv-Outro">Outro(s):</label>
+            <input type="text" id="serv-Outro" name="serv-Outro" placeholder="Digite outro(s) upgrade(s)">
+
+            <label>Intenção de Uso:</label>
+            <div class="checkbox-group">
+                <label for="jogos"><input type="checkbox" id="jogos" name="uso[]" value="Jogos"> Jogos</label>
+                <label for="trabalho"><input type="checkbox" id="trabalho" name="uso[]" value="Trabalho"> Trabalho</label>
+                <label for="estudos"><input type="checkbox" id="estudos" name="uso[]" value="Estudos"> Estudos</label>
+                <label for="edicao"><input type="checkbox" id="edicao" name="uso[]" value="Edição de Vídeo/Imagem"> Edição de Vídeo/Imagem</label>
+                <label for="programacao"><input type="checkbox" id="programacao" name="uso[]" value="Programação"> Programação</label>
+                <label for="domestico"><input type="checkbox" id="domestico" name="uso[]" value="Uso Doméstico/Navegação na Internet"> Uso Doméstico/Navegação na Internet</label>
+                <label for="outros"><input type="checkbox" id="outros" name="uso[]" value="Outros"> Outros:</label>
+                <input type="text" id="outros-texto" name="outros-texto" placeholder="Especifique">
+            </div>
+
+        
+            <label for="nome-cliente">Nome do Cliente:</label>
+            <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Digite seu nome" required>
+        
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
+        
+            <label for="telefone">Telefone/WhatsApp:</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+        </div>
+        <button id="enviar-upgrade" type="submit">Enviar</button>
+        <p id="texto-opcao"></p>
+    </section>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="../src/routes/routes.js"></script>
+    <script src="../src/controller/app.js"></script>
+    <script src="../src/controller/periféricos.js"></script>
+</body>
+
+</html>
