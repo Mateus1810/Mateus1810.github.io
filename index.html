@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+    <style>
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f4f6;
+            color: #333;
+            text-align: center;
+            flex-direction: column;
+            transition: background-color 0.5s ease;
+        }
+
+        /* Estilo do título */
+        h1 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Estilo do texto de aviso */
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            animation: fadeIn 3s ease-out;
+        }
+
+        /* Animação para o fade-in */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Estilo do link */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #333;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = "http//:Mateus1810.github.io/public/home.html"; // Corrigido para URL completa
+        }, 5000); // 3 segundos
+    </script>
+</head>
+<body>
+    <h1>Você será redirecionado em 5 segundos...</h1>
+    <p>Se não for redirecionado, <a href="http//:Mateus1810.github.io/public/home.html">clique aqui</a>.</p>
+</body>
+</html>
