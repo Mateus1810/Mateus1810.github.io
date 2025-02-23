@@ -140,6 +140,7 @@ nav ul li a:hover {
     transition: transform 0.2s ease;
     background-color: #026780;
     color:#ccc;
+    animation: pulsar 2s infinite; /* Tornando a animação mais devagar */
 }
 
 .btn-primary {
@@ -248,6 +249,7 @@ nav ul li a:hover {
 .botoes-problema button:hover {
     background-color: #00ccff;
     color: #000;
+    
 }
 
 .perguntaaa input[type="text"] {
@@ -318,6 +320,7 @@ nav ul li a:hover {
 #enviar-upgrade:hover {
     background-color: #026780;
     color: #ccc;
+    animation: pulsar 2s infinite; /* Tornando a animação mais devagar */
 }
 
 /* Media query para a seção .upgrade */
@@ -358,6 +361,7 @@ nav ul li a:hover {
 
 .whatsapp-button:hover {
     background-color: #2bff00;
+    animation: pulsar 2s infinite; /* Tornando a animação mais devagar */
 }
 
 .email-button {
@@ -465,6 +469,7 @@ nav ul li a:hover {
     color: #ccc; /* Cor do texto do botão no hover */
     transform: scale(1.05);
     transition: transform 0.2s ease;
+    animation: pulsar 2s infinite; /* Tornando a animação mais devagar */
 }
 
 .consulta-info #enviarPecasCliente {
