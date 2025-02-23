@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('#upgrade'); // Seletor do formulário de upgrade
     const botoesUpgrade = document.querySelectorAll('.botoes-upgrade button'); // Botões de upgrade de componentes
     const campoNomeCliente = document.getElementById('nome-cliente'); // Campo "Nome do Cliente"
+    const campoSobrenomeCliente = document.getElementById('sobrenome-cliente'); // Campo "Sobrenome cliente"
     const campoServOutro = document.getElementById('serv-Outro'); // Campo "Outros upgrades"
     const botaoEnviar = document.getElementById('enviar-upgrade'); // Botão de enviar
+    const telefoneInput = document.getElementById('telefone');
 
     // Lista para armazenar upgrades de hardware ou software selecionados
     let upgradesSelecionados = [];
@@ -26,25 +28,36 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Máscara para o telefone
+    telefoneInput.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 0) {
+            value = '(' + value.substring(0, 2) + ') ' + value.substring(2, 7) + '-' + value.substring(7, 11);
+        }
+        e.target.value = value;
+    });
+
     // Evento no botão de envio
     botaoEnviar.addEventListener('click', function (event) {
         event.preventDefault();
 
+        const sobrenomeCliente = campoSobrenomeCliente.value.trim();
+        const telefone = telefoneInput.value.trim();
         const nomeCliente = campoNomeCliente.value.trim(); // Valor do campo Nome do Cliente
         const servOutro = campoServOutro.value.trim(); // Valor do campo Outros upgrades
 
         // Verificar se o nome foi preenchido
-        if (!nomeCliente) {
-            alert('Por favor, preencha o campo "Nome do Cliente".');
+        if (!nomeCliente, !sobrenomeCliente, !telefone) {
+            alert('Por favor, preencha o campo "Nome, Sobrenome e telefone".');
             return;
         }
 
         // Gerar a mensagem com base no que foi selecionado/preenchido
-        let mensagem = `Olá, meu nome é ${nomeCliente} e gostaria de saber mais sobre os upgrades de PC.`;
+        let mensagem = `Olá, meu nome é ${nomeCliente} ${sobrenomeCliente} Telefone/WhatsApp: ${telefone} e gostaria de saber mais sobre os upgrades de PC.`;
 
         if (upgradesSelecionados.length > 0) {
             const upgrades = upgradesSelecionados.join(', ');
-            mensagem = `Olá, meu nome é ${nomeCliente} e gostaria de saber mais sobre os seguintes upgrades: ${upgrades}`;
+            mensagem = `Olá, meu nome é ${nomeCliente} ${sobrenomeCliente} Telefone/WhatsApp: ${telefone} e gostaria de saber mais sobre os seguintes upgrades: ${upgrades}`;
         }
 
         if (servOutro) {
@@ -52,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ? `, incluindo: ${servOutro}.`
                 : `, especificamente sobre: ${servOutro}.`;
         } else if (upgradesSelecionados.length === 0) {
-            mensagem = `Olá, meu nome é ${nomeCliente}. Não selecionei nenhum upgrade específico, mas gostaria de mais informações.`;
+            mensagem = `Olá, meu nome é ${nomeCliente} ${sobrenomeCliente} Telefone/WhatsApp: ${telefone}. Não selecionei nenhum upgrade específico, mas gostaria de mais informações.`;
         }
 
         // Redirecionar para o WhatsApp com a mensagem

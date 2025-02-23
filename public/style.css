@@ -317,6 +317,21 @@ nav ul li a:hover {
     font-size: 16px;
 }
 
+.upgrade-container input[type="tel"]{
+    width: 100%; /* Largura dos campos de texto e número */
+    padding: 10px;
+    border: 1px solid #00ccff; /* Borda azul */
+    border-radius: 5px;
+    background-color: #222; /* Fundo escuro */
+    color: #ccc; /* Cor do texto */
+}
+
+@media (max-width: 755px){
+    .upgrade-container input[type="tel"]{
+        width: 90%;
+    }
+}
+
 #enviar-upgrade:hover {
     background-color: #026780;
     color: #ccc;
