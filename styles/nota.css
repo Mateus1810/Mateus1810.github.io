@@ -58,3 +58,21 @@ textarea {
 .btn-primary:hover {
     background-color: #0056b3;
 }
+
+.button{
+    background-color: #868686;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto;
+    color: #000000;
+}
+
+.button:hover{
+    transition: 0.4s;
+    background-color: #60ff44;
+
+}

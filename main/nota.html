@@ -37,25 +37,50 @@
             <tr>
                 <td colspan="2"><textarea id="servico" placeholder="Serviço Realizado"></textarea></td>
             </tr>
+
+            <!-- Tabela de Produtos Gastos -->
             <tr>
-                <td colspan="2"><textarea id="pecas" placeholder="Peças Gastas"></textarea></td>
+                <th colspan="2">Itens Gastos</th>
             </tr>
+            <tr>
+                <td colspan="2">
+                    <table id="produtos-gastos">
+                        <thead>
+                            <tr>
+                                <th>Itens</th>
+                                <th>Quantidade</th>
+                                <th>Valor Unitário (R$)</th>
+                                <th>Total (R$)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" class="produto" placeholder="Nome do Item"></td>
+                                <td><input type="number" class="quantidade" placeholder="Quantidade" oninput="calcularTotalProdutos()"></td>
+                                <td><input type="number" class="valor" placeholder="Valor Unitário" oninput="calcularTotalProdutos()"></td>
+                                <td><input type="text" class="total-produto" readonly></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="button" type="button" onclick="adicionarProduto()">Adicionar Produto</button>
+                </td>
+            </tr>
+
             <tr>
                 <th colspan="2">Valores</th>
             </tr>
             <tr>
-                <td><input type="text" id="subtotal" placeholder="Subtotal (R$)"></td>
-                <td><input type="text" id="descontos" placeholder="Descontos (R$)"></td>
+                <td><input type="text" id="subtotal" placeholder="Subtotal (R$)" oninput="calcularTotal()"></td>
+                <td><input type="text" id="descontos" placeholder="Descontos (R$)" oninput="calcularTotal()"></td>
             </tr>
             <tr>
-                <td><input type="text" id="outros" placeholder="Outros Serviços (R$)"></td>
-                <td><input type="text" id="total" placeholder="Total (R$)"></td>
+                <td><input type="text" id="outros" placeholder="Outros Serviços (R$)" oninput="calcularTotal()"></td>
+                <td><input type="text" id="total" placeholder="Total (R$)" readonly></td>
             </tr>
         </table>
         <button class="btn-primary" onclick="gerarPDF()">Gerar PDF</button>
     </div>
 
     <script src="../src/controller/nota.js"></script>
-
 </body>
 </html>
