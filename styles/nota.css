@@ -4,6 +4,7 @@ body {
     margin: 20px;
     background-color: #f4f4f4;
 }
+
 .container {
     max-width: 900px;
     margin: auto;
@@ -12,24 +13,29 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 h2 {
     color: #333;
     margin-bottom: 20px;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
+
 th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
+
 th {
     background-color: #007bff;
     color: white;
 }
+
 input, textarea {
     width: calc(100% - 16px);
     padding: 8px;
@@ -39,10 +45,12 @@ input, textarea {
     font-size: 14px;
     display: block;
 }
+
 textarea {
     resize: vertical;
     height: 80px;
 }
+
 .btn-primary {
     width: 100%;
     background-color: #007bff;
@@ -55,11 +63,12 @@ textarea {
     margin-top: 10px;
     transition: 0.3s;
 }
+
 .btn-primary:hover {
     background-color: #0056b3;
 }
 
-.button{
+.button {
     background-color: #868686;
     padding: 8px;
     border: none;
@@ -71,8 +80,75 @@ textarea {
     color: #000000;
 }
 
-.button:hover{
+.button:hover {
     transition: 0.4s;
     background-color: #60ff44;
+}
 
+/* Responsivo para telas pequenas */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    input, textarea {
+        font-size: 12px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+/* Responsivo para telas muito pequenas, como celulares */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    input, textarea {
+        font-size: 12px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 6px;
+    }
 }
