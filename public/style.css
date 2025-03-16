@@ -730,3 +730,35 @@ nav ul li a:hover {
 #textoOpcao {
     margin-left: 10px; /* Espaço entre o texto e o botão */
 }
+
+/* Rodapé */
+footer {
+    background-color:  rgba(0, 0, 0, 0.8); /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.ponto{
+    cursor: default;
+    color: #fff; /* Torna o texto invisível */
+    text-decoration: none; /* Remove o sublinhado típico de links */
+    background: transparent; /* Garante que não tenha fundo */
+    border: none; /* Remove a borda se houver */
+    padding: 0; /* Remove o preenchimento */
+    width: 0; /* Não ocupa largura */
+    height: 0; /* Não ocupa altura */
+}

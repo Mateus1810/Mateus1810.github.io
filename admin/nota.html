@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <link rel="icon" href="../src/img/2302974.ico">
+    
 </head>
 <body>
     <div class="container">
@@ -76,6 +78,51 @@
             <tr>
                 <td><input type="text" id="outros" placeholder="Outros Serviços (R$)" oninput="calcularTotal()"></td>
                 <td><input type="text" id="total" placeholder="Total (R$)" readonly></td>
+            </tr>
+            <tr>
+                <th colspan="2">Forma de Pagamento</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="forma-pagamento" onchange="calcularTotal()">
+                        <option value="Dinheiro/Pix">Dinheiro/Pix</option>
+                        <option value="Cartão">Cartão</option>
+                        <option value="Débito">Débito</option> <!-- Opção de Débito -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Taxa da Maquina</th> <!-- Cabeçalho para a nova taxa -->
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span id="taxa-maquina">0,00%</span> <!-- Exibe a taxa como texto -->
+                </td>
+            </tr>
+            
+            <tr>
+                <th colspan="2">Parcelamento</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="parcelamento" onchange="calcularTotal()">
+                        <option value="1">À vista</option>
+                        <option value="2">2x</option>
+                        <option value="3">3x</option>
+                        <option value="4">4x</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    <p id="parcelas"></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="duplicatas"></div>
+                </td>
             </tr>
         </table>
         <button class="btn-primary" onclick="gerarPDF()">Gerar PDF</button>

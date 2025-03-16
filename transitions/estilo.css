@@ -1,0 +1,121 @@
+/* Corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #a2c2e3, #b8d8d6); /* Gradiente suave em tons de azul e verde */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Container de login */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo claro com transparência */
+    padding: 40px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra leve para profundidade */
+}
+
+/* Estilização do título */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4a4a4a; /* Cinza mais suave */
+}
+
+/* Estilização dos inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9; /* Fundo suave e claro */
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #58a6e3; /* Azul suave ao focar */
+}
+
+/* Estilização do botão */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #58a6e3; /* Azul suave */
+    border: 2px solid #58a6e3;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+button:hover {
+    color: #fff;
+    border-color: #4a8fd4;
+    transform: scale(1.05);
+}
+
+button:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Efeito de clique */
+button:active {
+    transform: scale(0.98);
+    background-color: #4a8fd4; /* Azul mais escuro */
+    border-color: #4a8fd4;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}

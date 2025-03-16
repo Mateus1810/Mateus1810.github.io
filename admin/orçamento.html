@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerador de Orçamentos de Serviço">
+    <title>Gerador de Orçamento</title>
+    <link rel="stylesheet" href="../styles/orçamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Orçamento de Serviço</h2>
+        <table>
+            <tr>
+                <th colspan="2">Dados do Cliente</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="nome" placeholder="Nome do Cliente"></td>
+                <td><input type="text" id="telefone" placeholder="Telefone do Cliente"></td>
+            </tr>
+            <tr>
+                <th colspan="2">Detalhes do Serviço</th>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea id="descricao" placeholder="Descrição do Serviço"></textarea></td>
+            </tr>
+            <tr>
+                <th colspan="2">Itens e Materiais</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table id="itens-orcamento">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantidade</th>
+                                <th>Valor Unitário (R$)</th>
+                                <th>Total (R$)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" class="item" placeholder="Nome do Item"></td>
+                                <td><input type="number" class="quantidade" placeholder="Qtd" oninput="calcularTotal()"></td>
+                                <td><input type="number" class="valor" placeholder="Valor Unitário" oninput="calcularTotal()"></td>
+                                <td><input type="text" class="total-item" readonly></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="button" type="button" onclick="adicionarItem()">Adicionar Item</button>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Valores</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="subtotal" placeholder="Subtotal (R$)" readonly></td>
+                <td><input type="text" id="desconto" placeholder="Desconto (R$)" oninput="calcularTotal()"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="total" placeholder="Total (R$)" readonly></td>
+                <td><input type="text" id="validade" placeholder="Validade (dias)"></td>
+                <tr>
+                    <th colspan="2">Forma de Pagamento</th>
+                </tr>
+                <tr>
+                    <td colspan="2" class="forma-pagamento">
+                        <input type="radio" id="dinheiro" name="forma-pagamento" value="dinheiro" checked>
+                        <label for="dinheiro">💵 Dinheiro/Pix</label>
+                
+                        <input type="radio" id="cartao" name="forma-pagamento" value="cartao">
+                        <label for="cartao">💳 Cartão (+6,77%)</label>
+                    </td>
+                </tr>
+                
+        </table>
+        <button class="btn-primary" onclick="gerarPDF()">Gerar PDF</button>
+        <a class="Trocar" href="../main/nota.html">Trocar para nota de serviço</a>
+    </div> 
+
+    <script src="../src/controller/orçamento.js"></script>
+</body>
+</html>

@@ -186,11 +186,35 @@ textarea {
     color: #ffffff;
 }
 
+/* Estilo para exibição da taxa da máquina */
+#taxa-maquina {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    display: inline-block;
+}
+
 /* Melhorando responsividade */
 @media (max-width: 768px) {
     .forma-pagamento {
         flex-direction: column;
         align-items: center;
     }
+    
+    #taxa-maquina {
+        font-size: 14px;
+        margin-top: 15px;
+    }
 }
 
+.Trocar{
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 5px;
+  
+}
