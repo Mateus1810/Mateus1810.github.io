@@ -7,7 +7,7 @@ function login() {
     const validPass = "Galinha";
 
     if (user === validUser && pass === validPass) {
-        window.location.href = "https://Mateus1810.github.io/admin/nota.html"; // Substitua pelo URL da página desejada após login bem-sucedido
+        window.location.href = "/Mateus1810.github.io/src/routes/transitions.html"; // Substitua pelo URL da página desejada após login bem-sucedido
     } else {
         errorMsg.textContent = "Usuário ou senha incorretos!";
     }
