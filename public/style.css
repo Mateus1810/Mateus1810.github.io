@@ -756,9 +756,4 @@ footer p {
     cursor: default;
     color: #fff; /* Torna o texto invisível */
     text-decoration: none; /* Remove o sublinhado típico de links */
-    background: transparent; /* Garante que não tenha fundo */
-    border: none; /* Remove a borda se houver */
-    padding: 0; /* Remove o preenchimento */
-    width: 0; /* Não ocupa largura */
-    height: 0; /* Não ocupa altura */
 }
