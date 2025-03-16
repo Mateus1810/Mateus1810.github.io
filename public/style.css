@@ -731,9 +731,8 @@ nav ul li a:hover {
     margin-left: 10px; /* Espaço entre o texto e o botão */
 }
 
-/* Rodapé */
 footer {
-    background-color:  rgba(0, 0, 0, 0.8); /* Cor de fundo escura */
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo escura */
     color: #fff; /* Cor do texto */
     padding: 20px 0;
     position: relative;
@@ -752,8 +751,8 @@ footer p {
     margin-bottom: 10px;
 }
 
-.ponto{
+.ponto {
     cursor: default;
-    color: #fff; /* Torna o texto invisível */
-    text-decoration: none; /* Remove o sublinhado típico de links */
+    color: #fff; 
+    text-decoration: none; 
 }
