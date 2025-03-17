@@ -8,24 +8,25 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    overflow-x: hidden; /* Impede rolagem horizontal */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    padding: 10px; /* Adiciona um pequeno espaçamento */
 }
 
 /* Container de login */
 .login-container {
     background-color: rgba(255, 255, 255, 0.85);
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
-    width: 90%;
+    width: 100%;
     max-width: 380px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Evita estouro de largura */
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho */
 }
 
 /* Estilização do título */
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -34,10 +35,10 @@ h2 {
 
 /* Inputs */
 input {
-    width: 100%; /* Sempre ocupa toda a largura disponível */
-    max-width: 300px; /* Evita inputs muito largos */
-    padding: 10px;
-    margin: 10px auto;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 100%; /* Garante que não estoure */
+    padding: 12px;
+    margin: 8px 0; /* Reduzindo a margem */
     border: 2px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
@@ -45,6 +46,7 @@ input {
     outline: none;
     transition: border 0.3s ease;
     display: block;
+    box-sizing: border-box; /* Evita estouro */
 }
 
 input:focus {
@@ -54,9 +56,9 @@ input:focus {
 /* Botão */
 button {
     width: 100%;
-    max-width: 300px;
+    max-width: 100%; /* Garante que o botão também não estoure */
     padding: 12px;
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: #58a6e3;
     border: 2px solid #58a6e3;
     color: white;
@@ -66,6 +68,7 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     display: block;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -81,15 +84,14 @@ button:active {
 @media (max-width: 480px) {
     .login-container {
         padding: 20px;
-        width: 95%;
+        width: 100%;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     input, button {
-        max-width: 100%; /* Garante que os elementos se ajustem ao tamanho da tela */
         font-size: 14px;
     }
 }
