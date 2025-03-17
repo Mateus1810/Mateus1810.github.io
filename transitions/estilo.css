@@ -4,12 +4,13 @@ body {
     background: linear-gradient(45deg, #a2c2e3, #b8d8d6);
     color: #333;
     display: flex;
+    flex-direction: column; /* Permite que o conteúdo fique empilhado */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    overflow-x: hidden; /* Evita rolagem horizontal */
-    padding: 10px; /* Adiciona um pequeno espaçamento */
+    overflow-x: hidden;
+    padding: 10px;
 }
 
 /* Container de login */
@@ -17,28 +18,19 @@ body {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 15px;
-    width: 100%;
+    width: 90%;
     max-width: 380px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Garante que padding não aumente o tamanho */
-}
-
-/* Estilização do título */
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #4a4a4a;
+    box-sizing: border-box;
 }
 
 /* Inputs */
 input {
-    width: 100%; /* Ocupa toda a largura disponível */
-    max-width: 100%; /* Garante que não estoure */
+    width: calc(100% - 20px); /* Garante que respeite o padding */
+    max-width: 100%;
     padding: 12px;
-    margin: 8px 0; /* Reduzindo a margem */
+    margin: 8px 0;
     border: 2px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
@@ -46,17 +38,13 @@ input {
     outline: none;
     transition: border 0.3s ease;
     display: block;
-    box-sizing: border-box; /* Evita estouro */
-}
-
-input:focus {
-    border-color: #58a6e3;
+    box-sizing: border-box;
 }
 
 /* Botão */
 button {
-    width: 100%;
-    max-width: 100%; /* Garante que o botão também não estoure */
+    width: calc(100% - 20px);
+    max-width: 100%;
     padding: 12px;
     margin-top: 10px;
     background-color: #58a6e3;
@@ -71,35 +59,21 @@ button {
     box-sizing: border-box;
 }
 
-button:hover {
-    background-color: #4a8fd4;
-    border-color: #4a8fd4;
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-/* Ajusta os campos de input para telas pequenas */
+/* Responsividade para telas pequenas */
 @media (max-width: 480px) {
     .login-container {
-        width: 90%; /* Reduz a largura do container */
+        width: 95%;
         padding: 15px;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
-    input {
-        font-size: 14px;
-        padding: 10px;
-        max-width: 100%; /* Garante que os inputs não ultrapassem a largura do container */
-        box-sizing: border-box; /* Evita que padding aumente o tamanho total */
-    }
-
+    input,
     button {
         font-size: 1rem;
-        padding: 12px;
+        padding: 10px;
+        width: 100%; /* Garante que fique ajustado à tela */
     }
 }
