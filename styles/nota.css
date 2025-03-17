@@ -1,3 +1,4 @@
+/* Corpo da página */
 body {
     font-family: 'Raleway', sans-serif;
     text-align: center;
@@ -5,18 +6,29 @@ body {
     background-color: #797979;
 }
 
+/* Container */
 .container {
     max-width: 900px;
+    width: 90%;
     margin: auto;
     padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
+/* Estilização dos títulos */
 h2 {
     color: #333;
     margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Tabela responsiva */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
 }
 
 table {
@@ -29,6 +41,7 @@ th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+    word-wrap: break-word;
 }
 
 th {
@@ -36,14 +49,15 @@ th {
     color: white;
 }
 
+/* Inputs e Textarea */
 input, textarea {
-    width: calc(100% - 16px);
-    padding: 8px;
+    width: 100%;
+    padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    display: block;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -51,6 +65,7 @@ textarea {
     height: 80px;
 }
 
+/* Botão principal */
 .btn-primary {
     width: 100%;
     background-color: #007bff;
@@ -68,6 +83,7 @@ textarea {
     background-color: #0056b3;
 }
 
+/* Botão secundário */
 .button {
     background-color: #868686;
     padding: 8px;
@@ -85,89 +101,21 @@ textarea {
     background-color: #60ff44;
 }
 
-/* Responsivo para telas pequenas */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 10px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    table {
-        font-size: 12px;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    input, textarea {
-        font-size: 12px;
-    }
-
-    .btn-primary {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .button {
-        font-size: 14px;
-        padding: 6px;
-    }
-}
-
-/* Responsivo para telas muito pequenas, como celulares */
-@media (max-width: 480px) {
-    .container {
-        width: 100%;
-        padding: 8px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    table {
-        font-size: 10px;
-    }
-
-    th, td {
-        padding: 6px;
-    }
-
-    input, textarea {
-        font-size: 12px;
-    }
-
-    .btn-primary {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .button {
-        font-size: 12px;
-        padding: 6px;
-    }
-}
-
 /* Estilização da seção de pagamento */
 .forma-pagamento {
     display: flex;
-    justify-content: flex-start; /* Alinha à esquerda */
-    align-items: center; /* Alinha verticalmente */
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se ajustem automaticamente */
+    gap: 10px;
     margin-top: 10px;
-    margin-left: 0; /* Garantir que a margem à esquerda esteja zerada */
     border: none;
 }
 
 .forma-pagamento label {
-    display:flex;
-    color: rgb(255, 255, 255);
+    display: flex;
     align-items: center;
+    color: rgb(255, 255, 255);
     background: #0051ff;
     padding: 10px 15px;
     border-radius: 5px;
@@ -186,11 +134,81 @@ textarea {
     color: #ffffff;
 }
 
-/* Melhorando responsividade */
+/* Responsividade para tablets */
 @media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .table-container {
+        overflow-x: auto; /* Evita que a tabela fique cortada */
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 6px;
+    }
+
     .forma-pagamento {
         flex-direction: column;
         align-items: center;
     }
 }
 
+/* Responsividade para celulares pequenos */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    input, textarea {
+        font-size: 12px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .forma-pagamento {
+        flex-direction: column;
+        align-items: center;
+    }
+}
