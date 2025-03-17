@@ -1,25 +1,25 @@
 /* Corpo da página */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(45deg, #a2c2e3, #b8d8d6); /* Gradiente suave em tons de azul e verde */
+    background: linear-gradient(45deg, #a2c2e3, #b8d8d6);
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Garantir altura mínima sem cortar conteúdo */
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden; /* Evita rolagem lateral */
 }
 
 /* Container de login */
 .login-container {
-    background-color: rgba(255, 255, 255, 0.85); /* Fundo claro com transparência */
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 40px;
     border-radius: 15px;
     width: 80%;
     max-width: 380px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra leve para profundidade */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilização do título */
@@ -28,10 +28,10 @@ h2 {
     margin-bottom: 30px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #4a4a4a; /* Cinza mais suave */
+    color: #4a4a4a;
 }
 
-/* Estilização dos inputs */
+/* Inputs */
 input {
     width: 100%;
     padding: 12px;
@@ -39,22 +39,21 @@ input {
     border: 2px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
-    color: #333;
-    background-color: #f9f9f9; /* Fundo suave e claro */
+    background-color: #f9f9f9;
     outline: none;
     transition: border 0.3s ease;
 }
 
 input:focus {
-    border-color: #58a6e3; /* Azul suave ao focar */
+    border-color: #58a6e3;
 }
 
-/* Estilização do botão */
+/* Botão */
 button {
     width: 100%;
     padding: 14px;
     margin-top: 20px;
-    background-color: #58a6e3; /* Azul suave */
+    background-color: #58a6e3;
     border: 2px solid #58a6e3;
     color: white;
     font-size: 1.2rem;
@@ -66,43 +65,23 @@ button {
     transition: all 0.3s ease;
 }
 
-button:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
-    transition: transform 0.3s ease;
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
 button:hover {
     color: #fff;
     border-color: #4a8fd4;
     transform: scale(1.05);
 }
 
-button:hover:before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-/* Efeito de clique */
 button:active {
     transform: scale(0.98);
-    background-color: #4a8fd4; /* Azul mais escuro */
+    background-color: #4a8fd4;
     border-color: #4a8fd4;
 }
 
-/* Responsividade para telas pequenas */
-@media (max-width: 480px) {
+/* Responsividade para tablets e celulares médios */
+@media (max-width: 768px) {
     .login-container {
-        padding: 20px;
-        max-width: 90%;
+        width: 90%;
+        padding: 30px;
     }
 
     h2 {
@@ -117,5 +96,27 @@ button:active {
     button {
         font-size: 1rem;
         padding: 12px;
+    }
+}
+
+/* Responsividade para telas pequenas (celulares pequenos) */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
     }
 }
