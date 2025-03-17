@@ -80,18 +80,26 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Responsividade para telas menores */
+/* Ajusta os campos de input para telas pequenas */
 @media (max-width: 480px) {
     .login-container {
-        padding: 20px;
-        width: 100%;
+        width: 90%; /* Reduz a largura do container */
+        padding: 15px;
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
-    input, button {
+    input {
         font-size: 14px;
+        padding: 10px;
+        max-width: 100%; /* Garante que os inputs não ultrapassem a largura do container */
+        box-sizing: border-box; /* Evita que padding aumente o tamanho total */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
     }
 }
