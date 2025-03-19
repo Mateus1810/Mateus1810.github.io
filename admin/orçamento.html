@@ -63,20 +63,7 @@
             </tr>
             <tr>
                 <td><input type="text" id="total" placeholder="Total (R$)" readonly></td>
-                <td><input type="text" id="validade" placeholder="Validade (dias)"></td>
-                <tr>
-                    <th colspan="2">Forma de Pagamento</th>
-                </tr>
-                <tr>
-                    <td colspan="2" class="forma-pagamento">
-                        <input type="radio" id="dinheiro" name="forma-pagamento" value="dinheiro" checked>
-                        <label for="dinheiro">💵 Dinheiro/Pix</label>
-                
-                        <input type="radio" id="cartao" name="forma-pagamento" value="cartao">
-                        <label for="cartao">💳 Cartão (+6,77%)</label>
-                    </td>
-                </tr>
-                
+                <td><input type="text" id="validade" placeholder="Validade (dias)"></td>                
         </table>
         <button class="btn-primary" onclick="gerarPDF()">Gerar PDF</button>
     </div> 

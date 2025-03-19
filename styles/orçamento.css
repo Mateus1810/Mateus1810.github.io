@@ -212,3 +212,19 @@ textarea {
     }
 }
 
+.btn-remover {
+    background-color: #d9534f; /* Vermelho */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, opacity 0.2s;
+}
+
+.btn-remover:hover {
+    background-color: #c9302c; /* Vermelho mais escuro */
+    opacity: 0.8;
+}
