@@ -189,6 +189,7 @@ function calcularTotal() {
     let parcelamento = document.getElementById("parcelamento").value;
     let totalInput = document.getElementById("total");
     let pixInput = document.getElementById("in_value");
+    let dvCt = document.querySelector(".dv_ct"); // Seleciona o elemento com a classe "dv_ct"
 
     // Calcular a taxa
     let taxa = 0;
@@ -229,6 +230,13 @@ function calcularTotal() {
 
     // Atualizar as parcelas
     atualizarParcelas(parseInt(parcelamento), totalComTaxa);
+
+    // Mostrar ou esconder a classe "dv_ct"
+    if (formaPagamento === "Dinheiro/Pix") {
+        dvCt.style.display = "flex"; // Exibir
+    } else {
+        dvCt.style.display = "none"; // Esconder
+    }
 }
 
 
