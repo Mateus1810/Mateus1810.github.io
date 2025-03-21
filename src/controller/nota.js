@@ -187,17 +187,19 @@ function calcularTotal() {
     let outros = parseFloat(document.getElementById("outros").value) || 0;
     let formaPagamento = document.getElementById("forma-pagamento").value;
     let parcelamento = document.getElementById("parcelamento").value;
+    let totalInput = document.getElementById("total");
+    let pixInput = document.getElementById("in_value");
 
     // Calcular a taxa
     let taxa = 0;
-    let taxaTexto = "";  // Variável para mostrar o texto da taxa
+    let taxaTexto = "";
 
     if (formaPagamento === "Cartão") {
-        if (parcelamento === "1") {  // Se for "À vista", aplica a taxa reduzida
-            taxa = 5.24;  // Taxa de 5,24% para "Cartão" à vista
+        if (parcelamento === "1") {
+            taxa = 5.24;
             taxaTexto = "5,24% (à vista)";
         } else {
-            taxa = 6.77;  // Taxa de 6,77% para Cartão com parcelamento
+            taxa = 6.77;
             taxaTexto = "6,77% (parcelado)";
         }
     } else if (formaPagamento === "Cartão Avista") {
@@ -210,21 +212,25 @@ function calcularTotal() {
         taxaTexto = "0,00%";
     }
 
-    // Exibir a taxa no elemento <span>
+    // Exibir a taxa
     document.getElementById("taxa-maquina").textContent = taxaTexto;
 
-    // Calcular o total
+    // Calcular o total com a taxa
     let totalComTaxa = subtotal - descontos + outros;
     if (formaPagamento !== "Dinheiro/Pix") {
-        totalComTaxa += totalComTaxa * (taxa / 100); // Adiciona a taxa ao total
+        totalComTaxa += totalComTaxa * (taxa / 100);
     }
 
     // Exibir o total
-    document.getElementById("total").value = totalComTaxa.toFixed(2);
+    totalInput.value = totalComTaxa.toFixed(2);
 
-    // Atualiza as parcelas
-    atualizarParcelas(parseInt(parcelamento), totalComTaxa);  // Atualiza as parcelas com o total calculado
+    // Atualizar automaticamente o valor do PIX
+    pixInput.value = totalInput.value;
+
+    // Atualizar as parcelas
+    atualizarParcelas(parseInt(parcelamento), totalComTaxa);
 }
+
 
 function atualizarParcelas(parcelamento, total) {
     let duplicatasDiv = document.getElementById("duplicatas");
@@ -288,4 +294,5 @@ function removerProduto(botao) {
     linha.remove();
     calcularTotalProdutos(); // Atualiza o total após remover o item
 }
+
 

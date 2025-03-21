@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gerador de Notas de Serviço em PDF">
     <title>Gerar Nota de Serviço</title>
-    <link rel="stylesheet" href="../styles/nota.css">
+    <link rel="stylesheet" href="../styles/nota.css">   
+    <link rel="stylesheet" href="../styles/pix.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <link rel="icon" href="../src/img/2302974.ico">
     
 </head>
@@ -127,11 +129,36 @@
                     <div id="duplicatas"></div>
                 </td>
             </tr>
-            
         </table>
+        <div id="dv_ct" class="dv_ct">
+            <div class="dv_ct_2">    
+                <div class="ct_valor_receber">
+                    <div class="dv_comprar">
+                        <input id="in_key" type="text" style="display: none;" value="a03b54c4-3eac-4c28-976c-c006d11f580f" readonly></input>
+                        <input id="in_value" type="number" style="display: none" value="0" readonly></input>
+                        <div class="dv_ct" onclick="showQrCode()">
+                            <img id="im_qrcode" src="" class="im_moeda"/>
+                            <span class="tx_3">PAGAR COM PIX</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="ct_qrcode" id="ct_qrcode">
+                    <div class="dv_copiacola" onclick="copyClipboard()">
+                        <span class="tx_5">PIX copia e cola:&nbsp;</span>
+                        <img id="im_copia" src="" class="im_moeda"/>
+                    </div>
+                    <span class="tx_4" id="tx_val_qrcode">qrcodetext</span>
+                    
+                    <span class="tx_5">PIX QR Code:</span>
+                    <canvas id="qrcode" class="cv"></canvas>
+                </div>
+            </div>
+        </div>
+
         <button class="btn-primary" onclick="gerarPDF()">Gerar PDF</button>
     </div>
-
+    <script src="../src/controller/pix.js"></script>
     <script src="../src/controller/nota.js"></script>
 </body>
 </html>
