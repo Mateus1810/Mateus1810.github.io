@@ -38,19 +38,26 @@
            <!-- <button type="button" data-upgrade="Remoção de vírus e malwares">Remoção de Vírus e Malwares</button> -->
             <button type="button" data-upgrade="Instalação de programas básicos">Instalação de Programas Básicos</button>
             <!-- <button type="button" data-upgrade="Configuração de inicialização rápida">Configuração de Inicialização Rápida</button> -->
+            <button type="button" data-upgrade="Desbloqueio">Desbloqueio</button>
 
         </div>
         </div>
-        <p><b>Caso nao encontre o que deseja, informe no campo "Outros"</b></p>
+        <p><b>Caso não encontre o que deseja, informe no campo "Outros"</b></p>
         <div class="upgrade-container">
             <label for="serv-Outro">Outro(s):</label>
             <input type="text" id="serv-Outro" name="serv-Outro" placeholder="Digite outros serviços">
         
             <label for="nome-cliente">Nome do Cliente:</label>
             <input type="text" id="nome-cliente" name="nome-cliente" placeholder="Digite seu nome" required>
-        </div>        
-        <button id="enviar-upgrade" type="submit" >Enviar</button>
-    </section>
+        
+            <label for="sobrenome-cliente">Sobrenome:</label>
+            <input type="text" id="sobrenome-cliente" name="sobrenome-cliente" placeholder="Digite seu sobrenome" required>
+        
+            <label for="telefone-cliente">Telefone/WhatsApp:</label>
+            <input type="tel" id="telefone-cliente" name="telefone-cliente" placeholder="(00) 00000-0000" required>
+        </div>
+        <button id="enviar-upgrade" type="submit">Enviar</button>
+        
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -65,6 +72,6 @@
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
     <script src="../src/controller/formManutencao.js"></script>
-    </body>
+</body>
 
 </html>

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             imgSrc: "../src/img/Screenshot_20221222-142126_Gallery.jpg",
-            title: "Montagem completa de um computador novo"
+            title: "Montagem completa de um computador novo com sistema operacional"
         },
         {
             imgSrc: "../src/img/20220213_094921.jpg",
@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             imgSrc: "../src/img/273051965_201025975541122_8519923515218445004_n.jpg",
             title: "Formatação e limpeza"
+        },
+        {
+            imgSrc: "../src/img/Imagem do WhatsApp de 2025-04-13 à(s) 11.33.53_90d8e51a.jpg",
+            title: "Desbloqueio e Formatação"
         }
+
         // Adicione mais itens conforme necessário
     ];
 
