@@ -34,6 +34,16 @@
             </a>
          </main>
     </section>
+
+    <section class="doacao" style="background-color: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 12px; color: white; max-width: 400px; margin: 40px auto; text-align: center;">
+        <h2>Apoie nosso trabalho 💖</h2>
+        <p>Se quiser apoiar nosso projeto, você pode fazer uma doação via PIX usando o QR Code abaixo:</p>
+        <img src="../src/img/qrcode-pix.png" alt="QR Code para doação via PIX" style="max-width: 250px; width: 100%; height: auto; margin: 20px 0; border: 4px solid rgba(255, 255, 255); /* branco com transparência */">
+        <p><strong>Chave PIX:</strong></p>
+        <p id="chavePix" style="word-break: break-all;">a03b54c4-3eac-4c28-976c-c006d11f580f</p>
+        <button onclick="copiarChavePIX()" style="margin-top: 10px; padding: 10px 15px; border: none; border-radius: 8px; background-color: #00c853; color: rgb(0, 0, 0); cursor: pointer; font-weight: bolder;">📋 Copiar chave PIX</button>
+        <p style="margin-top: 15px;">Obrigado pelo seu apoio! 🙏</p>
+    </section>
     
 
     <!-- esse codigo ai é para libras-->
@@ -51,7 +61,17 @@
     <!--aqui nao é as libras mais mas pode copiar para adiantar a vida-->
     <script src="../src/routes/routes.js"></script>
     <script src="../src/controller/app.js"></script>
-   
-
+    <script>
+        function copiarChavePIX() {
+            const chave = document.getElementById("chavePix").textContent;
+            navigator.clipboard.writeText(chave).then(() => {
+                alert("Chave PIX copiada com sucesso! ✅");
+            }).catch(err => {
+                alert("Erro ao copiar a chave. 😕");
+                console.error(err);
+            });
+        }
+        </script>
+        
 </body>
 </html>
