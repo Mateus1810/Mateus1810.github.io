@@ -54,6 +54,19 @@ nav ul li a:hover {
     color: #00ccff;
 }
 
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 0.8em;
+    }
+}
+
+
 /* Seção Home */
 #home {
     display: flex;
@@ -801,7 +814,7 @@ footer p {
 
 .info-container .highlight-bg {
     background-color: #00bcd4;
-    color: #fff;
+    color: #000000;
     padding: 5px 15px; /* Padding maior para um visual mais equilibrado */
     border-radius: 20px; /* Bordas mais arredondadas para um toque moderno */
     font-weight: bold;
@@ -869,3 +882,44 @@ footer p {
     height: 100%;
     border: 0;
   }
+  .tab-container {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .tab-buttons {
+    display: inline-flex;
+    gap: 8px;
+  }
+  
+  /* Estilo compacto e elegante */
+  .tab-buttons .tablink {
+    background: transparent;
+    color: #00bcd4;
+    border: 1px solid #00bcd4;
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  /* Hover mais suave */
+  .tab-buttons .tablink:hover {
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  
+  /* Aba ativa com destaque sutil */
+  .tab-buttons .tablink.active {
+    background-color: #00bcd4;
+    color: #fff;
+    border-color: #00bcd4;
+  }
+  .atendimento-lista li {
+    margin-bottom: 5px; 
+    line-height: 1.6;
+}
