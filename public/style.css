@@ -6,24 +6,51 @@
 }
 
 body {
-    text-align: center;
-    font-family: "Raleway", serif;
-    background-image: url('../src/img/1373383.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    padding-top: 60px; /* Ajuste conforme altura do header */
+  text-align: center;
+  font-family: "Raleway", serif;
+  background: #0e0e0e; /* base preta */
+  color: #fff;
+  padding-top: 60px; /* Ajuste conforme altura do header */
+  position: relative;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Media Query para telas menores (telefone/celular) */
-@media (max-width: 768px) {
-    body {
-        margin: auto;
-        background-image: url('../src/img/7adbace9787dadcb1365f11917c8b6d6.jpg');
-        /* Fundo para celular */
-    }
+/* camada do padrão + glow */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* Gradiente + padrão futurista */
+  background-image:
+    radial-gradient(circle at top left, rgba(0, 123, 255, 0.15), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(0, 123, 255, 0.1), transparent 70%),
+    linear-gradient(45deg, rgba(0, 150, 255, 0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0, 150, 255, 0.05) 25%, transparent 25%);
+
+  background-size: 
+    100% 100%, /* gradiente 1 */
+    100% 100%, /* gradiente 2 */
+    60px 60px, /* padrão diagonal 1 */
+    60px 60px; /* padrão diagonal 2 */
+
+  z-index: -1;
+  pointer-events: none; /* não atrapalha clique */
 }
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  body::before {
+    background-size: 
+      100% 100%,
+      100% 100%,
+      40px 40px,
+      40px 40px; /* padrão mais compacto */
+  }
+}
+
 
 /* Cabeçalho e Navegação */
 header {
@@ -771,7 +798,7 @@ footer p {
 }
 /* Seção de Informações */
 .info-container {
-    background-color: #333; /* Tom mais escuro e elegante */
+    background-color: #000000b2; /* Tom mais escuro e elegante */
     color: #fff;
     padding: 50px; /* Aumentei o padding para uma sensação mais espaçosa */
     border-radius: 15px;
